@@ -2,13 +2,7 @@ function toggleMenu() {
     const overlay = document.getElementById("overlay");
     overlay.style.width = overlay.style.width === "100%" ? "0" : "100%";
 }
-// Toggle menu for mobile
-function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-}
 
-// Scroll animation
-// Show the "Go to Top" button on scroll
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
