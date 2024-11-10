@@ -6,10 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('Images/back.png') no-repeat center center fixed;
-    background-size: cover;
     color: #333;
-    overflow: hidden;
+
 }
 
 /* Navbar Styles - Kept as provided */
@@ -53,25 +51,50 @@ body {
 
 /* Reviews Section Styles */
 .reviews-section {
-    padding: 120px 20px 40px;
-    max-width: 900px;
+    padding: 140px 20px 40px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     color: #333;
-
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
+    background-image: url("Images/back.png");
+    background-size: cover;
+    background-attachment: fixed; /* For fixed background */
+    position: relative;
 }
 
-.reviews-section h2 {
+
+.reviews-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+.reviews-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+
+    border-radius: 8px;
+}
+.reviews-content h2 {
     font-size: 42px;
+    z-index: 1;
+    position: relative;
     color: #00ba10;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Slightly lighter shadow */
 }
 
+
 .review-card {
+    position: relative;
+    z-index: 1;
     background-color: rgba(240, 255, 240, 0.9);
     border-radius: 8px;
     padding: 20px;
