@@ -1,0 +1,255 @@
+/* General Styling - remains the same */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navbar styling - remains the same */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px 25px;
+    box-shadow: 0px 3px 3px green;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: #01a60f;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li a {
+    color: #01a60f;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: #01a60f;
+    cursor: pointer;
+}
+
+.hero-section {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Fixes the background image for the parallax effect */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background-color: #01a60f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background-color: #019b0f;
+}
+
+/* Categories Section Styling */
+.categories-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.categories-section h2 {
+    font-size: 32px;
+    color: #01a60f;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category {
+    background-color: #f0fff0;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.category-btn {
+    display: block;
+    margin-top: 10px;
+    background-color: #01a60f;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.category-btn:hover {
+    background-color: #019b0f;
+}
+
+/* Reviews Section - Scrollable Horizontally */
+.reviews-scroll {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews-scroll h2 {
+    font-size: 32px;
+    color: #01a60f;
+    margin-bottom: 20px;
+}
+
+.scrolling-reviews {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+    gap: 10px;
+}
+
+.review-box {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background-color: rgba(240, 255, 240, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 128, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.review-box:hover {
+    transform: scale(1.05);
+}
+
+/* Back to Top Button */
+.go-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #01a60f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.go-to-top:hover {
+    background-color: #019b0f;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .category {
+        width: 300px;
+        padding: 25px;
+    }
+    
+    .category-btn {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .scrolling-reviews {
+        padding: 20px;
+        gap: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .category {
+        width: 350px;
+        padding: 30px;
+    }
+    
+    .category-btn {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 920px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .hero-content h1 { font-size: 36px; }
+    .hero-content p { font-size: 16px; }
+}
